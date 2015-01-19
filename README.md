@@ -3,7 +3,7 @@ This is a basic Flask app with a simple api.
 Below is the api documentation, I am using curl in my examples.
 
 To receive all messages:
-curl http://my-website.com/history/messages
+curl http://my-website.com/history/messages/
 
 to receive all messages for a specific user:
 curl http://my-website.com/history/Username

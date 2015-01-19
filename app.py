@@ -83,7 +83,7 @@ def not_found(error):
 
 
 #Retun all messages
-@app.route('/history/messages', methods=['GET'])
+@app.route('/history/messages/', methods=['GET'])
 def get_all_messages():
     messages = Message.query.all()
     result = messages_schema.dump(messages)
