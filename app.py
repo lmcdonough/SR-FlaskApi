@@ -76,13 +76,6 @@ message_schema = MessageSchema()
 messages_schema = MessageSchema(many=True, only=('id', 'title', 'body', 'contact'))
 
 
-#get password for api
-@auth.get_password
-def get_password(username):
-    if username == 'levi':
-        return 'python'
-    return None
-
 #basic error handler
 @app.errorhandler(404)
 def not_found(error):
@@ -91,7 +84,6 @@ def not_found(error):
 
 #Retun all messages
 @app.route('/history/messages/', methods=['GET'])
-@auth.login_required
 def get_all_messages():
     messages = Message.query.all()
     result = messages_schema.dump(messages)
@@ -99,7 +91,6 @@ def get_all_messages():
 
 #Return all messages for a certain contact
 @app.route('/history/<string:name>', methods=['GET'])
-@auth.login_required
 def get_user_messages(name):
     try:        
         contact = Contact.query.filter_by(name=name).first()
@@ -111,7 +102,6 @@ def get_user_messages(name):
 
 #create new message for a contact
 @app.route('/history/<string:name>', methods=['POST'])
-@auth.login_required
 def new_message(name):
     if not request.get_json():
         return jsonify({'message': 'No input data provided'}), 400    
