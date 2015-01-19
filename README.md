@@ -1,6 +1,6 @@
 This is a basic Flask app with a simple api.
 
-Below is the api documentation
+Below is the api documentation, I am using curl in my examples.
 
 To receive all messages:
 curl http://my-website.com/history/messages
