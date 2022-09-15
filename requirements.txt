@@ -11,7 +11,7 @@ Werkzeug==0.9.6
 aniso8601==0.92
 decorator==3.4.0
 itsdangerous==0.24
-marshmallow==1.2.1
+marshmallow==2.15.1
 ordereddict==1.1
 pbr==0.10.7
 psycopg2==2.5.4
