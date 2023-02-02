@@ -7,7 +7,7 @@ MarkupSafe==0.23
 MySQL-python==1.2.5
 SQLAlchemy==0.9.8
 Tempita==0.5.2
-Werkzeug==0.9.6
+Werkzeug==0.15.5
 aniso8601==0.92
 decorator==3.4.0
 itsdangerous==0.24
